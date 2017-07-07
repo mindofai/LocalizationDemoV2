@@ -38,6 +38,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\PlatformCulture.cs" />
     <Compile Include="Helpers\TranslateExtension.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -53,6 +54,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AppResources.es.resx</DependentUpon>
     </Compile>
+    <Compile Include="Services\ILocalize.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MainPage.xaml">

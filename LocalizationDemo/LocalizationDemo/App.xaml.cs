@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LocalizationDemo.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,13 @@ namespace LocalizationDemo
         public App()
         {
             InitializeComponent();
+
+            if (Device.OS == TargetPlatform.Android || Device.OS == TargetPlatform.iOS)
+            {
+                var ci = DependencyService.Get<ILocalize>().GetCurrentCultureInfo();
+                Resx.AppResources.Culture = ci;
+                DependencyService.Get<ILocalize>().SetLocale(ci);
+            }
 
             MainPage = new LocalizationDemo.MainPage();
         }

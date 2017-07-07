@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LocalizationDemo.Services;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -20,7 +21,7 @@ namespace LocalizationDemo.Helpers
 
         public TranslateExtension()
         {
-            ci = CultureInfo.CurrentCulture;
+            ci = DependencyService.Get<ILocalize>().GetCurrentCultureInfo();
         }
 
         public string Text { get; set; }
