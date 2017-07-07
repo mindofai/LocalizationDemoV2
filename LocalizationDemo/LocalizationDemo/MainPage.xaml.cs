@@ -1,4 +1,5 @@
-﻿using System;
+﻿using LocalizationDemo.Resx;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,6 +13,8 @@ namespace LocalizationDemo
         public MainPage()
         {
             InitializeComponent();
+            //NameLabel.Text = AppResources.NameText;
+            NameEntry.Placeholder = AppResources.NamePlaceholder;
         }
     }
 }
